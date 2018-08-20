@@ -1,0 +1,126 @@
+INSERT INTO `auditdb`.`compliance_type` (`Compliance_Type_ID`, `Compliance_Type_Name`) VALUES ('1', 'Labour Compliance');
+
+INSERT INTO `auditdb`.`tbl_country` (`Country_ID`, `Country_Code`, `Country_Name`) VALUES ('1', '101', 'India');
+INSERT INTO `auditdb`.`tbl_country` (`Country_ID`, `Country_Code`, `Country_Name`) VALUES ('2', '102', 'USA');
+
+INSERT INTO `auditdb`.`tbl_role` (`Role_ID`, `Role_Name`, `Is_Active`, `Is_Group_Role`) VALUES ('1', 'Product Admin', 1,1);
+INSERT INTO `auditdb`.`tbl_role` (`Role_ID`, `Role_Name`, `Is_Active`, `Is_Group_Role`) VALUES ('2', 'Admin', 1,1);
+INSERT INTO `auditdb`.`tbl_role` (`Role_ID`, `Role_Name`, `Is_Active`, `Is_Group_Role`) VALUES ('3', 'SME', 1,1);
+INSERT INTO `auditdb`.`tbl_role` (`Role_ID`, `Role_Name`, `Is_Active`, `Is_Group_Role`) VALUES ('4', 'Auditor', 1,1);
+INSERT INTO `auditdb`.`tbl_role` (`Role_ID`, `Role_Name`, `Is_Active`, `Is_Group_Role`) VALUES ('5', 'StackHolder', 1,1);
+INSERT INTO `auditdb`.`tbl_role` (`Role_ID`, `Role_Name`, `Is_Active`, `Is_Group_Role`) VALUES ('6', 'Guest', 1,1);
+
+INSERT INTO `auditdb`.`tbl_user` (`User_ID`, `User_Password`, `First_Name`, `Last_Name`, `Email_ID`, `Contact_Number`, `Company_ID`, `Gender`, `Is_Active`, `Last_Login`) VALUES ('1', 'admin', 'Admin', 'Admin', 'admin@gmail.com', '8909876543', '0', 'Male', 1, '2018-07-17 15:33:10');
+
+INSERT INTO `auditdb`.`tbl_privilege` (`Privilege_ID`, `Privilege_Name`, `Privilege_Type`, `Is_Active`) VALUES ('1', 'Create', 'sys', 1);
+INSERT INTO `auditdb`.`tbl_privilege` (`Privilege_ID`, `Privilege_Name`, `Privilege_Type`, `Is_Active`) VALUES ('2', 'Update', 'sys', 1);
+INSERT INTO `auditdb`.`tbl_privilege` (`Privilege_ID`, `Privilege_Name`, `Privilege_Type`, `Is_Active`) VALUES ('3', 'Delete', 'sys', 1);
+INSERT INTO `auditdb`.`tbl_privilege` (`Privilege_ID`, `Privilege_Name`, `Privilege_Type`, `Is_Active`) VALUES ('4', 'Read', 'sys', 1);
+
+INSERT INTO `auditdb`.`tbl_role_priv_map` (`Role_Priv_ID`, `Is_Active`, `Role_ID`, `Privilege_ID`) VALUES ('1',1, '1', '1');
+INSERT INTO `auditdb`.`tbl_role_priv_map` (`Role_Priv_ID`, `Is_Active`, `Role_ID`, `Privilege_ID`) VALUES ('2', 1, '1', '2');
+INSERT INTO `auditdb`.`tbl_role_priv_map` (`Role_Priv_ID`, `Is_Active`, `Role_ID`, `Privilege_ID`) VALUES ('3', 1, '1', '3');
+INSERT INTO `auditdb`.`tbl_role_priv_map` (`Role_Priv_ID`, `Is_Active`, `Role_ID`, `Privilege_ID`) VALUES ('4', 1, '1', '4');
+INSERT INTO `auditdb`.`tbl_role_priv_map` (`Role_Priv_ID`, `Is_Active`, `Role_ID`, `Privilege_ID`) VALUES ('5', 1, '2', '1');
+INSERT INTO `auditdb`.`tbl_role_priv_map` (`Role_Priv_ID`, `Is_Active`, `Role_ID`, `Privilege_ID`) VALUES ('6', 1, '2', '2');
+INSERT INTO `auditdb`.`tbl_role_priv_map` (`Role_Priv_ID`, `Is_Active`, `Role_ID`, `Privilege_ID`) VALUES ('7', 1, '2', '3');
+INSERT INTO `auditdb`.`tbl_role_priv_map` (`Role_Priv_ID`, `Is_Active`, `Role_ID`, `Privilege_ID`) VALUES ('8', 1, '2', '4');
+INSERT INTO `auditdb`.`tbl_role_priv_map` (`Role_Priv_ID`, `Is_Active`, `Role_ID`, `Privilege_ID`) VALUES ('9', 1, '3', '1');
+INSERT INTO `auditdb`.`tbl_role_priv_map` (`Role_Priv_ID`, `Is_Active`, `Role_ID`, `Privilege_ID`) VALUES ('10', 1, '3', '2');
+INSERT INTO `auditdb`.`tbl_role_priv_map` (`Role_Priv_ID`, `Is_Active`, `Role_ID`, `Privilege_ID`) VALUES ('11', 1, '3', '3');
+INSERT INTO `auditdb`.`tbl_role_priv_map` (`Role_Priv_ID`, `Is_Active`, `Role_ID`, `Privilege_ID`) VALUES ('12', 1, '3', '4');
+INSERT INTO `auditdb`.`tbl_role_priv_map` (`Role_Priv_ID`, `Is_Active`, `Role_ID`, `Privilege_ID`) VALUES ('13', 1, '4', '1');
+INSERT INTO `auditdb`.`tbl_role_priv_map` (`Role_Priv_ID`, `Is_Active`, `Role_ID`, `Privilege_ID`) VALUES ('14', 1, '4', '2');
+INSERT INTO `auditdb`.`tbl_role_priv_map` (`Role_Priv_ID`, `Is_Active`, `Role_ID`, `Privilege_ID`) VALUES ('15', 1, '4', '3');
+INSERT INTO `auditdb`.`tbl_role_priv_map` (`Role_Priv_ID`, `Is_Active`, `Role_ID`, `Privilege_ID`) VALUES ('16', 1, '4', '4');
+
+INSERT INTO `auditdb`.`tbl_user_group` (`User_Group_ID`, `User_Group_Name`, `Role_ID`, `Is_Active`) VALUES ('1', 'Product Admin', '1', 1);
+INSERT INTO `auditdb`.`tbl_user_group` (`User_Group_ID`, `User_Group_Name`, `Role_ID`, `Is_Active`) VALUES ('2', 'Admin', '2', 1);
+INSERT INTO `auditdb`.`tbl_user_group` (`User_Group_ID`, `User_Group_Name`, `Role_ID`, `Is_Active`) VALUES ('3', 'SME', '3', 1);
+INSERT INTO `auditdb`.`tbl_user_group` (`User_Group_ID`, `User_Group_Name`, `Role_ID`, `Is_Active`) VALUES ('4', 'Auditor', '4', 1);
+INSERT INTO `auditdb`.`tbl_user_group` (`User_Group_ID`, `User_Group_Name`, `Role_ID`, `Is_Active`) VALUES ('5', 'Stackholder', '5', 1);
+INSERT INTO `auditdb`.`tbl_user_group` (`User_Group_ID`, `User_Group_Name`, `Role_ID`, `Is_Active`) VALUES ('6', 'Guest', '6', 1);
+
+INSERT INTO `auditdb`.`tbl_user_group_members` (`User_Group_Members_ID`, `User_ID`, `User_Group_ID`) VALUES ('1', '1', '1');
+INSERT INTO `auditdb`.`tbl_user_group_members` (`User_Group_Members_ID`, `User_ID`, `User_Group_ID`) VALUES ('2', '2', '2');
+INSERT INTO `auditdb`.`tbl_user_group_members` (`User_Group_Members_ID`, `User_ID`, `User_Group_ID`) VALUES ('3', '3', '3');
+INSERT INTO `auditdb`.`tbl_user_group_members` (`User_Group_Members_ID`, `User_ID`, `User_Group_ID`) VALUES ('4', '4', '4');
+INSERT INTO `auditdb`.`tbl_user_group_members` (`User_Group_Members_ID`, `User_ID`, `User_Group_ID`) VALUES ('5', '5', '2');
+INSERT INTO `auditdb`.`tbl_user_group_members` (`User_Group_Members_ID`, `User_ID`, `User_Group_ID`) VALUES ('6', '6', '3');
+INSERT INTO `auditdb`.`tbl_user_group_members` (`User_Group_Members_ID`, `User_ID`, `User_Group_ID`) VALUES ('7', '7', '4');
+
+INSERT INTO `auditdb`.`tbl_menus` (`Menu_ID`, `Parent_MenuID`, `Menu_Name`, `Page_URL`, `Is_Active`, `icon`) VALUES ('1', '0', 'User Management', '/Common/dashboard', 1, '1_user.png');
+INSERT INTO `auditdb`.`tbl_menus` (`Menu_ID`, `Parent_MenuID`, `Menu_Name`, `Page_URL`, `Is_Active`, `icon`) VALUES ('2', '1', 'Manage Role', '/UserManagement/AddRoles', 1, 'ManageRoles.png');
+INSERT INTO `auditdb`.`tbl_menus` (`Menu_ID`, `Parent_MenuID`, `Menu_Name`, `Page_URL`, `Is_Active`, `icon`) VALUES ('3', '1', 'Manage User Group', '/UserManagement/AddUserGroup', 1, 'manageGroup.png');
+INSERT INTO `auditdb`.`tbl_menus` (`Menu_ID`, `Parent_MenuID`, `Menu_Name`, `Page_URL`, `Is_Active`, `icon`) VALUES ('4', '1', 'Add User', '/UserManagement/AddUser', 1, 'adduser.JPG');
+INSERT INTO `auditdb`.`tbl_menus` (`Menu_ID`, `Parent_MenuID`, `Menu_Name`, `Page_URL`, `Is_Active`, `icon`) VALUES ('5', '1', 'Manage User ', '/UserManagement/ListofUsers', 1, 'manageUsers.png');
+INSERT INTO `auditdb`.`tbl_menus` (`Menu_ID`, `Parent_MenuID`, `Menu_Name`, `Page_URL`, `Is_Active`, `icon`) VALUES ('6', '0', 'Group Management', '/Common/dashboard', 1, '1_group.png');
+INSERT INTO `auditdb`.`tbl_menus` (`Menu_ID`, `Parent_MenuID`, `Menu_Name`, `Page_URL`, `Is_Active`, `icon`) VALUES ('7', '6', 'Add Group ', '/ManageOrganization/AddGroupCompany', 1, 'manageGroupCompany.png');
+INSERT INTO `auditdb`.`tbl_menus` (`Menu_ID`, `Parent_MenuID`, `Menu_Name`, `Page_URL`, `Is_Active`, `icon`) VALUES ('8', '6', 'Manage Group ', '/ManageOrganization/GroupCompanyList',1, 'manageGroupCompany.png');
+INSERT INTO `auditdb`.`tbl_menus` (`Menu_ID`, `Parent_MenuID`, `Menu_Name`, `Page_URL`, `Is_Active`, `icon`) VALUES ('9', '0', 'Company Management', '/Common/dashboard', 1, '1_company.png');
+INSERT INTO `auditdb`.`tbl_menus` (`Menu_ID`, `Parent_MenuID`, `Menu_Name`, `Page_URL`, `Is_Active`, `icon`) VALUES ('10', '9', 'Add Company', '/ManageOrganization/AddCompany', 1, 'manageCompany.png');
+INSERT INTO `auditdb`.`tbl_menus` (`Menu_ID`, `Parent_MenuID`, `Menu_Name`, `Page_URL`, `Is_Active`, `icon`) VALUES ('11', '9', 'Manage Company', '/ManageOrganization/ListofCompany', 1, 'manageCompany.png');
+INSERT INTO `auditdb`.`tbl_menus` (`Menu_ID`, `Parent_MenuID`, `Menu_Name`, `Page_URL`, `Is_Active`, `icon`) VALUES ('12', '9', 'Add Branch', '/ManageOrganization/AddBranch', 1, 'manageBranch.png');
+INSERT INTO `auditdb`.`tbl_menus` (`Menu_ID`, `Parent_MenuID`, `Menu_Name`, `Page_URL`, `Is_Active`, `icon`) VALUES ('13', '9', 'Manage Branch', '/ManageOrganization/SelectCompany', 1, 'manageBranch.png');
+INSERT INTO `auditdb`.`tbl_menus` (`Menu_ID`, `Parent_MenuID`, `Menu_Name`, `Page_URL`, `Is_Active`, `icon`) VALUES ('14', '0', 'Acts and Rules', '/Common/dashboard', 1, '1_acts.png');
+INSERT INTO `auditdb`.`tbl_menus` (`Menu_ID`, `Parent_MenuID`, `Menu_Name`, `Page_URL`, `Is_Active`, `icon`) VALUES ('15', '14', 'Add Acts', '/ComplianceManagement/CreateActs', 1, 'manageActs.png');
+INSERT INTO `auditdb`.`tbl_menus` (`Menu_ID`, `Parent_MenuID`, `Menu_Name`, `Page_URL`, `Is_Active`, `icon`) VALUES ('16', '14', 'Add Rules', '/ComplianceManagement/ListofCompliance', 1, 'manageRules.png');
+INSERT INTO `auditdb`.`tbl_menus` (`Menu_ID`, `Parent_MenuID`, `Menu_Name`, `Page_URL`, `Is_Active`, `icon`) VALUES ('17', '14', 'Compliance Mapping', '/ComplianceManagement/SMEdashboard', 1, 'manageActs.png');
+INSERT INTO `auditdb`.`tbl_menus` (`Menu_ID`, `Parent_MenuID`, `Menu_Name`, `Page_URL`, `Is_Active`, `icon`) VALUES ('18', '0', 'Auditing', '/Common/dashboard', 1, 'audit_tool.png');
+INSERT INTO `auditdb`.`tbl_menus` (`Menu_ID`, `Parent_MenuID`, `Menu_Name`, `Page_URL`, `Is_Active`, `icon`) VALUES ('19', '18', 'Auditing', '/AuditManagement/addCompanyBranch', 1, 'Reports.png');
+INSERT INTO `auditdb`.`tbl_menus` (`Menu_ID`, `Parent_MenuID`, `Menu_Name`, `Page_URL`, `Is_Active`, `icon`) VALUES ('20', '0', 'Reports', '', 1, '1_report.png');
+INSERT INTO `auditdb`.`tbl_menus` (`Menu_ID`, `Parent_MenuID`, `Menu_Name`, `Page_URL`, `Is_Active`, `icon`) VALUES ('21', '9', 'Add Vendor', '/ManageOrganization/AddVendor', 1, 'manageBranch.png');
+INSERT INTO `auditdb`.`tbl_menus` (`Menu_ID`, `Parent_MenuID`, `Menu_Name`, `Page_URL`, `Is_Active`, `icon`) VALUES ('22', '9', 'Manage Vendor', '/ManageOrganization/SelectCompanyForVendor', 1, 'manageBranch.png');
+INSERT INTO `auditdb`.`tbl_menus` (`Menu_ID`, `Parent_MenuID`, `Menu_Name`, `Page_URL`, `Is_Active`, `icon`) VALUES ('23', '9', 'Vendor Branch Mapping', '/ManageOrganization/AssignVendorForBranch', 1, 'manageBranch.png');
+
+INSERT INTO `auditdb`.`tbl_usergroup_menu_map` (`User_Group_ID`, `Menu_ID`) VALUES ('1', '1');
+INSERT INTO `auditdb`.`tbl_usergroup_menu_map` (`User_Group_ID`, `Menu_ID`) VALUES ('1', '2');
+INSERT INTO `auditdb`.`tbl_usergroup_menu_map` (`User_Group_ID`, `Menu_ID`) VALUES ('1', '3');
+INSERT INTO `auditdb`.`tbl_usergroup_menu_map` (`User_Group_ID`, `Menu_ID`) VALUES ('1', '4');
+INSERT INTO `auditdb`.`tbl_usergroup_menu_map` (`User_Group_ID`, `Menu_ID`) VALUES ('1', '5');
+INSERT INTO `auditdb`.`tbl_usergroup_menu_map` (`User_Group_ID`, `Menu_ID`) VALUES ('1', '6');
+INSERT INTO `auditdb`.`tbl_usergroup_menu_map` (`User_Group_ID`, `Menu_ID`) VALUES ('1', '7');
+INSERT INTO `auditdb`.`tbl_usergroup_menu_map` (`User_Group_ID`, `Menu_ID`) VALUES ('1', '8');
+INSERT INTO `auditdb`.`tbl_usergroup_menu_map` (`User_Group_ID`, `Menu_ID`) VALUES ('1', '9');
+INSERT INTO `auditdb`.`tbl_usergroup_menu_map` (`User_Group_ID`, `Menu_ID`) VALUES ('1', '10');
+INSERT INTO `auditdb`.`tbl_usergroup_menu_map` (`User_Group_ID`, `Menu_ID`) VALUES ('1', '11');
+INSERT INTO `auditdb`.`tbl_usergroup_menu_map` (`User_Group_ID`, `Menu_ID`) VALUES ('1', '12');
+INSERT INTO `auditdb`.`tbl_usergroup_menu_map` (`User_Group_ID`, `Menu_ID`) VALUES ('1', '13');
+INSERT INTO `auditdb`.`tbl_usergroup_menu_map` (`User_Group_ID`, `Menu_ID`) VALUES ('1', '14');
+INSERT INTO `auditdb`.`tbl_usergroup_menu_map` (`User_Group_ID`, `Menu_ID`) VALUES ('1', '15');
+INSERT INTO `auditdb`.`tbl_usergroup_menu_map` (`User_Group_ID`, `Menu_ID`) VALUES ('1', '16');
+INSERT INTO `auditdb`.`tbl_usergroup_menu_map` (`User_Group_ID`, `Menu_ID`) VALUES ('1', '17');
+INSERT INTO `auditdb`.`tbl_usergroup_menu_map` (`User_Group_ID`, `Menu_ID`) VALUES ('1', '18');
+INSERT INTO `auditdb`.`tbl_usergroup_menu_map` (`User_Group_ID`, `Menu_ID`) VALUES ('1', '19');
+INSERT INTO `auditdb`.`tbl_usergroup_menu_map` (`User_Group_ID`, `Menu_ID`) VALUES ('1', '20');
+INSERT INTO `auditdb`.`tbl_usergroup_menu_map` (`User_Group_ID`, `Menu_ID`) VALUES ('1', '21');
+INSERT INTO `auditdb`.`tbl_usergroup_menu_map` (`User_Group_ID`, `Menu_ID`) VALUES ('1', '22');
+INSERT INTO `auditdb`.`tbl_usergroup_menu_map` (`User_Group_ID`, `Menu_ID`) VALUES ('1', '23');
+INSERT INTO `auditdb`.`tbl_usergroup_menu_map` (`User_Group_ID`, `Menu_ID`) VALUES ('2', '1');
+INSERT INTO `auditdb`.`tbl_usergroup_menu_map` (`User_Group_ID`, `Menu_ID`) VALUES ('2', '2');
+INSERT INTO `auditdb`.`tbl_usergroup_menu_map` (`User_Group_ID`, `Menu_ID`) VALUES ('2', '3');
+INSERT INTO `auditdb`.`tbl_usergroup_menu_map` (`User_Group_ID`, `Menu_ID`) VALUES ('2', '4');
+INSERT INTO `auditdb`.`tbl_usergroup_menu_map` (`User_Group_ID`, `Menu_ID`) VALUES ('2', '5');
+INSERT INTO `auditdb`.`tbl_usergroup_menu_map` (`User_Group_ID`, `Menu_ID`) VALUES ('2', '9');
+INSERT INTO `auditdb`.`tbl_usergroup_menu_map` (`User_Group_ID`, `Menu_ID`) VALUES ('2', '10');
+INSERT INTO `auditdb`.`tbl_usergroup_menu_map` (`User_Group_ID`, `Menu_ID`) VALUES ('2', '11');
+INSERT INTO `auditdb`.`tbl_usergroup_menu_map` (`User_Group_ID`, `Menu_ID`) VALUES ('2', '12');
+INSERT INTO `auditdb`.`tbl_usergroup_menu_map` (`User_Group_ID`, `Menu_ID`) VALUES ('2', '13');
+INSERT INTO `auditdb`.`tbl_usergroup_menu_map` (`User_Group_ID`, `Menu_ID`) VALUES ('2', '14');
+INSERT INTO `auditdb`.`tbl_usergroup_menu_map` (`User_Group_ID`, `Menu_ID`) VALUES ('2', '15');
+INSERT INTO `auditdb`.`tbl_usergroup_menu_map` (`User_Group_ID`, `Menu_ID`) VALUES ('2', '16');
+INSERT INTO `auditdb`.`tbl_usergroup_menu_map` (`User_Group_ID`, `Menu_ID`) VALUES ('2', '17');
+INSERT INTO `auditdb`.`tbl_usergroup_menu_map` (`User_Group_ID`, `Menu_ID`) VALUES ('2', '18');
+INSERT INTO `auditdb`.`tbl_usergroup_menu_map` (`User_Group_ID`, `Menu_ID`) VALUES ('2', '19');
+INSERT INTO `auditdb`.`tbl_usergroup_menu_map` (`User_Group_ID`, `Menu_ID`) VALUES ('2', '20');
+INSERT INTO `auditdb`.`tbl_usergroup_menu_map` (`User_Group_ID`, `Menu_ID`) VALUES ('2', '21');
+INSERT INTO `auditdb`.`tbl_usergroup_menu_map` (`User_Group_ID`, `Menu_ID`) VALUES ('2', '22');
+INSERT INTO `auditdb`.`tbl_usergroup_menu_map` (`User_Group_ID`, `Menu_ID`) VALUES ('2', '23');
+INSERT INTO `auditdb`.`tbl_usergroup_menu_map` (`User_Group_ID`, `Menu_ID`) VALUES ('3', '14');
+INSERT INTO `auditdb`.`tbl_usergroup_menu_map` (`User_Group_ID`, `Menu_ID`) VALUES ('3', '15');
+INSERT INTO `auditdb`.`tbl_usergroup_menu_map` (`User_Group_ID`, `Menu_ID`) VALUES ('3', '16');
+INSERT INTO `auditdb`.`tbl_usergroup_menu_map` (`User_Group_ID`, `Menu_ID`) VALUES ('3', '17');
+INSERT INTO `auditdb`.`tbl_usergroup_menu_map` (`User_Group_ID`, `Menu_ID`) VALUES ('4', '18');
+INSERT INTO `auditdb`.`tbl_usergroup_menu_map` (`User_Group_ID`, `Menu_ID`) VALUES ('4', '19');
+
+
